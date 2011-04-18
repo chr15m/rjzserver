@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Rjz Server</title>
+	<link href="/media/css/style.css" rel="stylesheet" type="text/css">
+	<meta name='viewport' content='width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=1;'/>
+</head>
+<body>
+<div>
+	<h1>Rjz Server</h1>
+</div>
+
+	
+	% for r in rjzs:
+		<p><a href='rjdj://${headers['HOST']}/${r}z' class='action'>Install ${r}z</a></p>
+	% endfor
+	
+	</div>
+	<div>
+        	<h2>Instructions</h2>
+        <ul>
+            <li><p><strong>Start Rjzserver on your computer</strong>. Rjzserver creates a small website on your computer that you can reach from your iThing to install scenes.</p></li>
+
+            <li><p>In the <strong>File -> Set scene directory</strong> you can point Rjzserver to where you keep your scenes. Point it to a directory that contains scene folders with the .rj file name extension.</p></li> 
+
+        <!--     <li><strong>Open Safari on your iPhone</strong> and point it to the adress that the Rjzserver says it's listening on. Remember to include the : and the port number at the end.</li> -->
+
+            <li><p>To install scenes, you go to this page with Safari on your iThing. But before you can install scenes, you need to change the proxy settings on your iPhone/iPod to let RjDj install scenes from your own computer instead of rjdj.me.</p>
+
+        <p>Go to "Settings/Wifi/" on the iPhone and pick your network's blue arrow. Scroll
+            down to the proxy settings and change them to:</p>
+
+        <p><ul><li>HTTP Proxy on</li>
+                <li>Manual</li>
+                <li>Server: your IP address as reported by rjzserver (like "192.168.1.1")</li>
+                <li>Port: 8314</li> 
+        </ul></p>
+        </li>
+            <li> <p><strong>Go to http://rjdj.me on your iThing. You should now see this very page!</strong> Tap the install button on a scene, and RjDj will open and download the scene from your computer.</p></li>
+        </ul>
+
+<h2>Rjz files</h2>
+    <p>If you just want the rjz-files, you can get them here:</p>
+% for r in rjzs:
+	<p><a href='${r}z'>Download: ${r}z</a>
+	    </p>
+% endfor
+
+
+    <small>By <a href='mailto:chrism@rjdj.me'>Chris McCormick</a></small>
+	<small>This software is GPLv3.</small>
+    </div>
+</body>
+</html>
+
+
+
