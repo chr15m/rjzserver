@@ -37,7 +37,7 @@ class Config(ConfigParser):
 	def GetUsername(self):
 		return self.username
 	
-	def Set(self, item, value, section="default"):
+	def Set(self, item, value, section="rjzserver"):
 		"""
 		Set an item without throwing an error if the section doesn't exist.
 		"""
@@ -46,7 +46,7 @@ class Config(ConfigParser):
 		
 		self.set(section, item, value)
 	
-	def Get(self, item, section="default", default=""):
+	def Get(self, item, section="rjzserver", default=""):
 		""" Get an item from the default section. """
 		if self.has_option(section, item):
 			return self.get(section, item)

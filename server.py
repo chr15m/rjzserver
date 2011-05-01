@@ -115,6 +115,8 @@ class RjzServer(HTTPServer):
 		self.Output("Listening on http://%s:%d/" % listen)
 		webbrowser.open("http://%s:%d/" % listen)
 		self.Output("Using directory %s" % config.Get("scenedir", default="."))
+		self.Output(str(sys.path))
+		self.Output(str(basedir))
 		self.Output("Select Help from the File menu for instructions on how to use RjzServer!")
 		self.quit = False
 	

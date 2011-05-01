@@ -21,3 +21,4 @@ setup(
     }},
 )
 
+shutil.copytree("media", path.join("dist", "media"))
